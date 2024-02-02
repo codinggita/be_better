@@ -7,10 +7,11 @@ import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import { Box } from "@mui/material";
 import Drawer from "@mui/material/Drawer";
 import MenuRoundedIcon from "@mui/icons-material/MenuRounded";
-import { List } from "@mui/material";
+import { List, ListItemButton } from "@mui/material";
 import ListItem from "@mui/material/ListItem";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
+import { NavLink, Link } from "react-router-dom";
 import AssignmentTurnedInIcon from "@mui/icons-material/AssignmentTurnedIn";
 
 function Navbar() {
@@ -28,27 +29,28 @@ function Navbar() {
             justifyContent: "space-between",
           }}
         >
-
-          <Box >
-          <IconButton color="inherit" onClick={handleToggle}>
-            <MenuRoundedIcon />
-          </IconButton>
-          <Drawer open={drawerOpen} onClose={handleToggle}>
-            <List>
-              <ListItem>
+          <Box>
+            <IconButton color="inherit" onClick={handleToggle}>
+              <MenuRoundedIcon />
+            </IconButton>
+            <Drawer open={drawerOpen} onClose={handleToggle}>
+              <List>
+              <ListItem  component={Link} to={"/daily-tasks"} >
                 <ListItemIcon>
-                  <AssignmentTurnedInIcon />
+                  <AssignmentTurnedInIcon/>
                 </ListItemIcon>
-                <ListItemText>Daily Tasks</ListItemText>
-              </ListItem>
+                <ListItemText>
+                  Daily Tasks!
+                </ListItemText>
+              </ListItem> 
             </List>
-          </Drawer>
+            </Drawer>
           </Box>
 
           <Box>
-            <Button color="inherit">Home</Button>
-            <Button color="inherit">About Us</Button>
-            <Button color="inherit">FAQs</Button>
+            <Button component={Link} to={"/home"} color="inherit">Home</Button>
+            <Button component={Link} to={"/aboutus"} color="inherit">About Us</Button>
+            <Button component={Link} to={"/faqs"} color="inherit">FAQs</Button>
           </Box>
 
           <IconButton color="inherit" size="large">
