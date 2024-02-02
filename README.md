@@ -20,16 +20,19 @@
 
 - List of features you want to implement.
 
-    **Simple and attractive UI**
-    **To do list**
-    **Pomodor sessions**
-    **Fincance Section to track expenses**
-    **Tracking and maintaing streak for habits**
-    **Dark theme**
-    **Sync with google fit and google calendar**
-    **User Sign Up / Sign In option**
-    **Profile and setting options**
+    - **Simple and attractive UI**
+    - **To do list**
+    - **Pomodor sessions**
+    - **Fincance Section to track expenses**
+    - **Tracking and maintaing streak for habits**
+    - **Dark theme**
+    - **Sync with google fit and google calendar**
+    - **User Sign Up / Sign In option**
+    - **Profile and setting options**
+
 
 API Documentation: https://documenter.getpostman.com/view/32459310/2s9YymHQP1
 
 Render : https://be-better.onrender.com/
+
+Netlify : https://be-better.netlify.app/
