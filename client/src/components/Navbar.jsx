@@ -43,6 +43,15 @@ function Navbar() {
                   Daily Tasks!
                 </ListItemText>
               </ListItem> 
+
+              <ListItem  component={Link} to={"/daily-tasks2"} >
+                <ListItemIcon>
+                  <AssignmentTurnedInIcon/>
+                </ListItemIcon>
+                <ListItemText>
+                  Daily Tasks Two
+                </ListItemText>
+              </ListItem> 
             </List>
             </Drawer>
           </Box>

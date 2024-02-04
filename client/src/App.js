@@ -6,6 +6,7 @@ import SignUp from './components/SignUp';
 import Home from './components/Home';
 import AboutUs from './components/AboutUs';
 import FAQs from './components/FAQs';
+import DailyTasksTwo from './components/DailyTasksTwo';
 import { BrowserRouter, Routes, Route, Navigate} from 'react-router-dom';
 
 
@@ -31,6 +32,7 @@ function App() {
             <Route path="/faqs" element={<FAQs />}></Route>
 
             <Route path="daily-tasks" element={<DailyTasks/>}></Route>
+            <Route path="daily-tasks2" element={<DailyTasksTwo/>}> </Route>
 
           </Routes>
 
