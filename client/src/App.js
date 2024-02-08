@@ -1,4 +1,3 @@
-
 import './App.css';
 import Navbar from './components/Navbar';
 import LogIn from './components/LogIn';
@@ -7,19 +6,21 @@ import Home from './components/Home';
 import AboutUs from './components/AboutUs';
 import FAQs from './components/FAQs';
 import DailyTasksTwo from './components/DailyTasksTwo';
-import { BrowserRouter, Routes, Route, Navigate} from 'react-router-dom';
+// import Footer from './components/Footer';
+import DailyTasks from './components/DailyTasks';
 
 
 import { useState } from 'react';
-import DailyTasks from './components/DailyTasks';
+import { BrowserRouter, Routes, Route, Navigate} from 'react-router-dom';
+
 function App() {
   const [isLoggedIn , setIsLoggedIn] = useState(false);
-  console.log(isLoggedIn);
   return (
       <>
         <BrowserRouter>
           <Navbar />
           <Routes>  
+
 
             <Route path="/" element={isLoggedIn ? <Home /> : <LogIn isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn}/>}></Route>
 
@@ -35,7 +36,6 @@ function App() {
             <Route path="daily-tasks2" element={<DailyTasksTwo/>}> </Route>
 
           </Routes>
-
         </BrowserRouter>
       </>
   );

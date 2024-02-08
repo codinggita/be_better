@@ -1,3 +1,5 @@
+
+
 import React from 'react'
 import { Typography ,Container  } from '@mui/material'
 const Home = () => {
@@ -33,4 +35,4 @@ const Home = () => {
   )
 }
 
-export default Home
+export default Home;

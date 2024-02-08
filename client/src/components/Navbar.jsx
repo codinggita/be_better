@@ -1,4 +1,5 @@
 import * as React from "react";
+import styled from "@emotion/styled";
 import AppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
 import Button from "@mui/material/Button";
@@ -14,9 +15,28 @@ import ListItemText from "@mui/material/ListItemText";
 import { NavLink, Link } from "react-router-dom";
 import AssignmentTurnedInIcon from "@mui/icons-material/AssignmentTurnedIn";
 
-function Navbar() {
-  const [drawerOpen, setDrawerOpen] = React.useState(false);
+// const AppBar = styled(MuiAppBar, {
+//   shouldForwardProp: (prop) => prop !== 'open',
+// })(({ theme, open }) => ({
+//   transition: theme.transitions.create(['margin', 'width'], {
+//     easing: theme.transitions.easing.sharp,
+//     duration: theme.transitions.duration.leavingScreen,
+//   }),
+//   ...(open && {
+//     width: `calc(100% - ${drawerWidth}px)`,
+//     marginLeft: `${drawerWidth}px`,
+//     transition: theme.transitions.create(['margin', 'width'], {
+//       easing: theme.transitions.easing.easeOut,
+//       duration: theme.transitions.duration.enteringScreen,
+//     }),
+//   }),
+// }));
 
+function Navbar() {
+  // const drawerWidth = 400;
+
+  const [drawerOpen, setDrawerOpen] = React.useState(false);
+  const bxref = React.useRef();
   function handleToggle() {
     setDrawerOpen(!drawerOpen);
   }
@@ -33,7 +53,7 @@ function Navbar() {
             <IconButton color="inherit" onClick={handleToggle}>
               <MenuRoundedIcon />
             </IconButton>
-            <Drawer open={drawerOpen} onClose={handleToggle}>
+            <Drawer  open={drawerOpen} onClose={handleToggle}>
               <List>
               <ListItem  component={Link} to={"/daily-tasks"} >
                 <ListItemIcon>
@@ -56,13 +76,17 @@ function Navbar() {
             </Drawer>
           </Box>
 
-          <Box>
+          <Box 
+            sx={{
+              display: 'flex',
+              gap: 2,
+            }}>
             <Button component={Link} to={"/home"} color="inherit">Home</Button>
             <Button component={Link} to={"/aboutus"} color="inherit">About Us</Button>
             <Button component={Link} to={"/faqs"} color="inherit">FAQs</Button>
           </Box>
 
-          <IconButton color="inherit" size="large">
+          <IconButton color="inherit" size="small">
             <AccountCircleIcon fontSize="large" />
           </IconButton>
         </Toolbar>

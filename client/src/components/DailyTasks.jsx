@@ -63,12 +63,7 @@ const DailyTasks = () => {
         </CardActions>
 
 
-        <CardContent 
-          sx={{
-            // bgcolor: 'grey',
-          }}>
-
-
+        <CardContent>
           <List 
             sx={{
               display: 'flex',

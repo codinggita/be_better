@@ -95,63 +95,63 @@ mongoose.connect(uri)
 
 
 
-const  Schema = mongoose.Schema;
-const UserSchema = new Schema({
-  uid :{
-    type : Number,
-    required : true,
-    unique : true,
-  },
+// const  Schema = mongoose.Schema;
+// const UserSchema = new Schema({
+//   uid :{
+//     type : Number,
+//     required : true,
+//     unique : true,
+//   },
 
-  sem1 :{
-    type : Number ,
-    required : true,
-  },
-  sem2 :{
-    type : Number,
-    required : true,
+//   sem1 :{
+//     type : Number ,
+//     required : true,
+//   },
+//   sem2 :{
+//     type : Number,
+//     required : true,
   
-  },
-  cgpa :{
-    type : Number,
-    required : true,
-  },
-});
+//   },
+//   cgpa :{
+//     type : Number,
+//     required : true,
+//   },
+// });
 
-//creating a model
-const UserDetails = mongoose.model("UserDetails",UserSchema);
+// //creating a model
+// const UserDetails = mongoose.model("UserDetails",UserSchema);
 
-const user1 = new UserDetails({
-  uid : 1,
-  sem1 : 7,
-  sem2 : 8,
-  cgpa : 7.5,
-});
-const user2 = new UserDetails({
-  uid : 2,
-  sem1 : 10,
-  sem2 : 10,
-  cgpa : 10,
-});
-const user3 = new UserDetails({
-  uid : 3,
-  sem1 : 5,
-  sem2 : 7,
-  cgpa : 6,
-});
+// const user1 = new UserDetails({
+//   uid : 1,
+//   sem1 : 7,
+//   sem2 : 8,
+//   cgpa : 7.5,
+// });
+// const user2 = new UserDetails({
+//   uid : 2,
+//   sem1 : 10,
+//   sem2 : 10,
+//   cgpa : 10,
+// });
+// const user3 = new UserDetails({
+//   uid : 3,
+//   sem1 : 5,
+//   sem2 : 7,
+//   cgpa : 6,
+// });
 
-const addUsersToDB = async () => {
-    try {
-      await user1.save();
-      console.log("User 1 added successfully!");
-      await user2.save();
-      console.log("User 2 added successfully!");
-      await user3.save();
-      console.log("User 3 added successfully!");
-    } catch (error) {
-      console.error("Error adding users:", error);
-    }
-  };
+// const addUsersToDB = async () => {
+//     try {
+//       await user1.save();
+//       console.log("User 1 added successfully!");
+//       await user2.save();
+//       console.log("User 2 added successfully!");
+//       await user3.save();
+//       console.log("User 3 added successfully!");
+//     } catch (error) {
+//       console.error("Error adding users:", error);
+//     }
+//   };
 //   addUsersToDB();
 
   module.exports = {
